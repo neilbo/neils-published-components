@@ -1,7 +1,7 @@
 import { Config } from '@stencil/core';
 
 export const config: Config = {
-  namespace: 'neils-published-components',
+  namespace: 'product-card',
   taskQueue: 'async',
   outputTargets: [
     {
