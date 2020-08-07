@@ -10,7 +10,7 @@ export class ToggleFavourite implements ComponentInterface {
   @Prop() text: string = '';
   @Prop() buttonColor: string = 'red';
   @State() toggle: boolean = false;
-  @Event() onToggleFavourite: EventEmitter;
+  @Event() toggleFavourite: EventEmitter;
   render() {
     return (
       <div>
@@ -30,7 +30,7 @@ export class ToggleFavourite implements ComponentInterface {
 
   toggleClick() {
     this.toggle = !this.toggle;
-    this.onToggleFavourite.emit({ isFavourite: this.toggle });
+    this.toggleFavourite.emit({ isFavourite: this.toggle });
   }
 
 }

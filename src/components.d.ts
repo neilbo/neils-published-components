@@ -90,7 +90,7 @@ declare namespace LocalJSX {
     }
     interface ToggleFavourite {
         "buttonColor"?: string;
-        "onOnToggleFavourite"?: (event: CustomEvent<any>) => void;
+        "onToggleFavourite"?: (event: CustomEvent<any>) => void;
         "text"?: string;
     }
     interface IntrinsicElements {
