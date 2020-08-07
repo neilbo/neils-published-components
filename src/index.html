@@ -1,17 +1,57 @@
 <!DOCTYPE html>
 <html dir="ltr" lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0">
-  <title>Stencil Component Starter</title>
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0"
+    />
+    <title>Stencil Component Starter</title>
 
-  <script type="module" src="/build/neils-published-components.esm.js"></script>
-  <script nomodule src="/build/neils-published-components.js"></script>
-
-</head>
-<body>
-
-  <my-component first="Stencil" last="'Don't call me a framework' JS"></my-component>
-
-</body>
+    <script
+      type="module"
+      src="/build/neils-published-components.esm.js"
+    ></script>
+    <script nomodule src="/build/neils-published-components.js"></script>
+  </head>
+  <body>
+    <my-component
+      first="Stencil"
+      last="'Don't call me a framework' JS"
+    ></my-component>
+    <product-container>
+      <product-card
+        name="Peanut Butter"
+        description="Crunchy style - goes well on bluberry bagels"
+        price="$5.00"
+        img="https://via.placeholder.com/150/000000/00FFFF/?text=Peanut-Butter"
+      >
+      <toggle-favourite></toggle-favourite>
+    </product-card>
+      <product-card
+        name="Peanut Butter"
+        description="Crunchy style - goes well on bluberry bagels"
+        price="$5.00"
+        img="https://via.placeholder.com/150/000000/FF00FF/?text=Peanut-Butter"
+      >
+        <toggle-favourite></toggle-favourite>
+      </product-card>
+      <product-card
+        name="Peanut Butter"
+        description="Crunchy style - goes well on bluberry bagels"
+        price="$5.00"
+        img="https://via.placeholder.com/150/000000/FFFF00/?text=Peanut-Butter"
+      >
+        <toggle-favourite></toggle-favourite>
+      </product-card>
+      <product-card
+        name="Peanut Butter"
+        description="Crunchy style - goes well on bluberry bagels"
+        price="$5.00"
+        img="https://via.placeholder.com/150/000000/FFFFFF/?text=Peanut-Butter"
+      >
+        <toggle-favourite></toggle-favourite>
+      </product-card>
+    </product-container>
+  </body>
 </html>

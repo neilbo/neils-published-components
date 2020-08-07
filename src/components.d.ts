@@ -20,6 +20,18 @@ export namespace Components {
          */
         "middle": string;
     }
+    interface ProductCard {
+        "description": string;
+        "img": string;
+        "name": string;
+        "price": number | string;
+    }
+    interface ProductContainer {
+    }
+    interface ToggleFavourite {
+        "buttonColor": string;
+        "text": string;
+    }
 }
 declare global {
     interface HTMLMyComponentElement extends Components.MyComponent, HTMLStencilElement {
@@ -28,8 +40,29 @@ declare global {
         prototype: HTMLMyComponentElement;
         new (): HTMLMyComponentElement;
     };
+    interface HTMLProductCardElement extends Components.ProductCard, HTMLStencilElement {
+    }
+    var HTMLProductCardElement: {
+        prototype: HTMLProductCardElement;
+        new (): HTMLProductCardElement;
+    };
+    interface HTMLProductContainerElement extends Components.ProductContainer, HTMLStencilElement {
+    }
+    var HTMLProductContainerElement: {
+        prototype: HTMLProductContainerElement;
+        new (): HTMLProductContainerElement;
+    };
+    interface HTMLToggleFavouriteElement extends Components.ToggleFavourite, HTMLStencilElement {
+    }
+    var HTMLToggleFavouriteElement: {
+        prototype: HTMLToggleFavouriteElement;
+        new (): HTMLToggleFavouriteElement;
+    };
     interface HTMLElementTagNameMap {
         "my-component": HTMLMyComponentElement;
+        "product-card": HTMLProductCardElement;
+        "product-container": HTMLProductContainerElement;
+        "toggle-favourite": HTMLToggleFavouriteElement;
     }
 }
 declare namespace LocalJSX {
@@ -47,8 +80,24 @@ declare namespace LocalJSX {
          */
         "middle"?: string;
     }
+    interface ProductCard {
+        "description"?: string;
+        "img"?: string;
+        "name"?: string;
+        "price"?: number | string;
+    }
+    interface ProductContainer {
+    }
+    interface ToggleFavourite {
+        "buttonColor"?: string;
+        "onOnToggleFavourite"?: (event: CustomEvent<any>) => void;
+        "text"?: string;
+    }
     interface IntrinsicElements {
         "my-component": MyComponent;
+        "product-card": ProductCard;
+        "product-container": ProductContainer;
+        "toggle-favourite": ToggleFavourite;
     }
 }
 export { LocalJSX as JSX };
@@ -56,6 +105,9 @@ declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
             "my-component": LocalJSX.MyComponent & JSXBase.HTMLAttributes<HTMLMyComponentElement>;
+            "product-card": LocalJSX.ProductCard & JSXBase.HTMLAttributes<HTMLProductCardElement>;
+            "product-container": LocalJSX.ProductContainer & JSXBase.HTMLAttributes<HTMLProductContainerElement>;
+            "toggle-favourite": LocalJSX.ToggleFavourite & JSXBase.HTMLAttributes<HTMLToggleFavouriteElement>;
         }
     }
 }
