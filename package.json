@@ -1,5 +1,5 @@
 {
-  "name": "product-card",
+  "name": "neils-published-components",
   "version": "0.0.1",
   "description": "Stencil Component Starter",
   "main": "dist/index.js",
@@ -9,7 +9,7 @@
   "types": "dist/types/index.d.ts",
   "collection": "dist/collection/collection-manifest.json",
   "collection:main": "dist/collection/index.js",
-  "unpkg": "dist/product-card/product-card.js",
+  "unpkg": "dist/neils-published-components/neils-published-components.js",
   "files": [
     "dist/",
     "loader/"
