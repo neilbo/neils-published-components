@@ -7,8 +7,8 @@ import { Component, ComponentInterface, h, State, Prop, EventEmitter, Event } fr
 })
 export class ToggleFavourite implements ComponentInterface {
 
-  @Prop() text: string = '';
-  @Prop() buttonColor: string = 'red';
+  @Prop() text: string;
+  @Prop() buttonColor: string;
   @State() toggle: boolean = false;
   @Event() toggleFavourite: EventEmitter;
   render() {
